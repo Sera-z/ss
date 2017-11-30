@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+<div id="app">
+   <p>{{message}}</p>
+    <button v-on:click="reverseMessage">反转字符串</button>
+</div>
+</body>
+<script src="__STATIC__/admin/js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message:'robot'
+        },
+        methods:{
+            reverseMessage:function(){
+                this.message = this.message.split('').reverse().join('')
+            }
+        }
+    })
+</script>
+</html>
+</html>
